@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Objectsandclasses - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="一、对象的本质是什么，类的本质是什么我所理解的对象，万物都是对象，而面向对象也是根据人的思维提出来的，无论是动物还是植物还是自然界的各种物质，都可以看作对象，对象自己具有的属性加上所具有的行为就是对,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Objectsandclasses</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Objectsandclasses</h1>
+        <div class="stuff">
+            <span>十一月 07, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="一、对象的本质是什么，类的本质是什么"><a href="#一、对象的本质是什么，类的本质是什么" class="headerlink" title="一、对象的本质是什么，类的本质是什么"></a>一、对象的本质是什么，类的本质是什么</h1><p>我所理解的对象，万物都是对象，而面向对象也是根据人的思维提出来的，无论是动物还是植物还是自然界的各种物质，都可以看作对象，对象自己具有的属性加上所具有的行为就是对象本身。所以对象就是算法加数据结构，算法就是方法，数据结构就是成员变量。</p>
+<p>而类就是一类对象的“类”，所以类就是若干对象的模板，对象的创建也就是从类开始。所以一切对象的研究上升一步就是对类的研究，而对对象的研究主要就是对数据结构和算法的研究。对类的研究除了是对对象的研究，最重要一点就是对类和类的关系的研究。</p>
+<p>再来回顾下java白皮书的关键属于，简单性，面向对象，安全性，健壮性，可移植性，解释型，高性能，多线程，动态性。</p>
+<p>类和对象又是java的核心，所以很多设计原则都要符合上述关键词。把所知道的类的关键字拿出来罗列下观察类的本质与概念。public\class\类名\static\private\构造器\访问器\更改器\重载\new</p>
+<p>1、java程序设计就是从设计类开始，最顶层的超级类是object。</p>
+<p>2、保证类的封装性-安全性，所以要注意访问修饰符的运用。在private中体现</p>
+<p>3、public class 公有类与源文件名相同。</p>
+<p>4、重载的特性全部在构造器身上，构造器本身方法没有返回值关键字。</p>
+<p>5、new是个操作符，new date()是新创建一个对象，date d=new date()是引用，引用代表内存地址。</p>
+<hr>
+<p>基本概念</p>
+<p>1、类的关系，继承，接口实现。</p>
+<p>2、单单封装了功能的类如：Math类，没有成员变量，也就是没有数据结构。没有实例域意味着什么，意味着其不是面向对象，因此不会生成对象。同static联系起来，都有共享的根本原则。</p>
+<p>3、一般的类String。算法加数据结构。</p>
+<p>4、Date birthday=new Date();基本的创建对象，new Date() 代表一个对象，new是操作符，大于号也是操作符。而birthday只是对象的引用，仅仅是指向对象的内存。</p>
+<p>5、this:两方面作用，第一，本来设计的意思是调用类对象，或者理解隐士参数，我认为理解隐士调用对象名比较合适，比如在更改器方法中，参数就会存在一个隐士参数this，而在参数括号里面没有显示，在方法体内可以使用。第二，用于表示构造方法名和类名相同其实（比较少见）。</p>
+<p>6、final关键字代表常量的意思，常量顾名思义，一旦创建不能被改变。但是要注意对基本类型来说不能改变就是值不能改变，对于引用对象名来说，不能改变则是内存地址不能改变，引用的位置不能改变，但是内部的值依然可以改变。</p>
+<p>7、静态域static，静态代表着内存共享的意思，这是本质，因此创建一个变量则不会再重复创建。不代表不能改变。静态常量能省下内存。静态方法本质上也要从共享的角度出发。静态方法可以解释为非面向对象方法，方法不对对象进行操作，如Math.pow(x,y);什么情况下使用静态方法，一个方法不需要访问对象，一个方法只需要访问类的静态域。总结的还是不好。</p>
+<p>8、方法参数，按值调用，这一点认识到就行了，同时认识到引用对象是内存地址的指向。参数本质上是拷贝传递过来的值。就是按值传递+拷贝，对象引用是内存指向。</p>
+<p>9、构造方法和重载，构造方法没有返回值，重载和返回值无关，和方法名和参数有关。同名不同参。</p>
+<p>10、包的层层创建本质上是为了各个包之间的不相关。</p>
+<p>最后放张图！</p>
+<p><img src="../images/Objectsandclasses/process.PNG"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
