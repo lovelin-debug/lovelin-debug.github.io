@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>inheritance - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="一、什么是继承继承：继承就是子类继承父类或者超类的行为和特征。所以继承是类与类之间的关系，行为就是方法，特征就是成员变量。这就是核心思想。思想归思想，真正理解什么是继承，还得从代码层面来理解！既然继,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">inheritance</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">inheritance</h1>
+        <div class="stuff">
+            <span>十一月 08, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="一、什么是继承"><a href="#一、什么是继承" class="headerlink" title="一、什么是继承"></a>一、什么是继承</h1><p>继承：继承就是子类继承父类或者超类的行为和特征。所以继承是类与类之间的关系，行为就是方法，特征就是成员变量。这就是核心思想。思想归思想，真正理解什么是继承，还得从代码层面来理解！既然继承涉及到子类和父类，那就从这两者入手。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//经理类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> bonus;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBonus</span><span class="params">(<span class="keyword">double</span> b)</span></span>&#123;</span><br><span class="line">        bonus=b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> baseSalary = <span class="keyword">super</span>.getSalary();</span><br><span class="line">        <span class="keyword">return</span> baseSalary+bonus;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//雇员类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span>  <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上述代码经典的子类继承超类，但是关键字只是部分，涉及到static等等很多的关键字。</p>
+<p>1、<strong>protected</strong>。经理 is a 雇员，满足这个基本的原则，可以继承。继承了一个成员变量和方法，但是注意访问权限，private 导致子类无法直接调用，因此继承不会连访问权限一起继承，调用bonus需要，使用继承的超类的setBonus(double b)来调用。什么时候可以调用呢，protected可以调用，protected关键字允许子类调用和包内其他类调用。由于可以无限子类继承，因此不建议用，会破坏封装性原则。</p>
+<p>2、**@override**。重写和重载不同，这是一个注解标注父类的这个方法被重写了。关于注解怎么运行的，后面章节会谈到。</p>
+<p>3、<strong>super</strong>。指示编译器调用父类的特殊关键字，和this有点像，但是this是一个对象的引用，可以将this赋给另一个对象变量，但是不能将super赋给别的对象变量。之所以用super调用超类方法，原因上边已经提到，是因为子类不能利用继承的方法或者重写的方法直接修改父类私有成员变量，父类私有成员变量只能在本类中调用。super和this一样可以调用构造器，但是super只能调用父类的构造器，且super作为构造方法名。</p>
+<p>4、继承只有单继承，父类可以有多个子类，一个子类不能有多个父类。</p>
+<p>5、final类，是最后一个类，意思是没有子类的类。final变量是常量，常量不变。阻止继承。域也就是成员变量声明final的话则在构造对象之后便不会再改变。但是如果声明类不会对里里面的成员变量有啥影响，只有其中的方法会自动成为final。则方法阻滞继承，不会有子类能修改这个方法。</p>
+<h1 id="二、什么是多态"><a href="#二、什么是多态" class="headerlink" title="二、什么是多态"></a>二、什么是多态</h1><p>多态，在java中对象变量是多态的。一个雇员变量既可以调用雇员类对象，也可以调用任何一个子类对象。注意什么是雇员变量 Employee e;才是雇员变量，new Employee是对象。在多态这一块书上讲的不是很好，<strong>视频讲的不错。</strong></p>
+<p>抽象类：抽象类不能被实例化。</p>
+<h1 id="三、什么是泛型数组列表"><a href="#三、什么是泛型数组列表" class="headerlink" title="三、什么是泛型数组列表"></a>三、什么是泛型数组列表</h1><p>1、什么泛型，把确定类型或者确定大小的工作在创建对象或调用方法的时候才去明确。也就是在运行中确定。</p>
+<p>2、什么是泛型数组列表—ArrayList&lt;&gt;();本质上是一个类，能够调用类方法进行添加操作，众所周知数组是不能随便更改长度的，而这个类里面本质上又是数组，其实他是在方法里面进行新建数组然后进行拷贝，以此来进行扩容。</p>
+<h1 id="四、什么是对象包装器与自动装箱"><a href="#四、什么是对象包装器与自动装箱" class="headerlink" title="四、什么是对象包装器与自动装箱"></a>四、什么是对象包装器与自动装箱</h1><p>举个例子，int和Integer，int是基本数据类型，基本数据类型不是对象，这也是少有的万物皆对象的例外，基本数据类型直接开辟存储空间。所以为了万物皆对象就把他装箱了，变成了Integer类，对象包装类是final，因此没有子类。</p>
+<p>自动装箱拆箱的意思是，int变量和Integer可以随意调换，比如，list.add(3);将自动变成list.add(Integer.valueof(3));</p>
+<h1 id="五、什么是反射"><a href="#五、什么是反射" class="headerlink" title="五、什么是反射"></a>五、什么是反射</h1><p>什么是反射这个得好好讲讲，<strong>留个眼在这</strong>。基本意思是，在程序运行过程中，每一个类都会产生唯一一个类型标识类class，注意这也是一个类名，只不过里面都是原本类的变量和方法，通过这个类型标识类能够反射出原有类的方法和变量。虚拟机利用运行时类型信息选择相应的方法。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
