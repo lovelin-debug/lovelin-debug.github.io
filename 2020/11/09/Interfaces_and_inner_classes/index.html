@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Archive</title>
+    <title>Interfaces_and_inner_classes - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="一、接口，什么是接口，为什么有接口，接口有什么用什么是接口：接口不是类，接口是对类一组需求的描述，这些类要遵从接口统一格式进行定义。因此接口不提供方法的实现，但提供方法的形式。因此接口和类很像，特别,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -33,63 +33,78 @@
 <body class="loading">
     <span id="config-title" style="display:none">Hexo</span>
     <div id="loader"></div>
-    <div id="single" class="page">
-    <div id="top">
-        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
-    </div>
-    <div class="section">
-        <div class="article">
-            <div class="main">
-                <div class="content">
-                    <div class="timeline">
-                      <h2 class="timeline-title">归档: 6篇</h2><hr>
-                      
-                      
-                        
-                          <h3 class="timeline-subtitle">2020</h3>
-                        
-                        <div class="timeline-item">
-                          <time>2020-11-09</time>
-                          <a target="_self" href="/2020/11/09/Interfaces_and_inner_classes/">Interfaces_and_inner_classes</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2020-11-08</time>
-                          <a target="_self" href="/2020/11/08/inheritance/">inheritance</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2020-11-07</time>
-                          <a target="_self" href="/2020/11/07/Objectsandclasses/">Objectsandclasses</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2020-11-06</time>
-                          <a target="_self" href="/2020/11/06/java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E4%BB%8E%E6%A6%82%E8%BF%B0%E5%88%B0%E5%9F%BA%E6%9C%AC%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84/">java语言基础：从概述到基本的程序设计结构</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2020-11-06</time>
-                          <a target="_self" href="/2020/11/06/java/">java</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2020-11-03</time>
-                          <a target="_self" href="/2020/11/03/hello-world/">Hello World</a>
-                        </div>
-                      
-                    </div>
-                </div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Interfaces_and_inner_classes</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
             </div>
+            <div id="qr"></div>
         </div>
     </div>
+    <div class="scrollbar"></div>
 </div>
 
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Interfaces_and_inner_classes</h1>
+        <div class="stuff">
+            <span>十一月 09, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="一、接口，什么是接口，为什么有接口，接口有什么用"><a href="#一、接口，什么是接口，为什么有接口，接口有什么用" class="headerlink" title="一、接口，什么是接口，为什么有接口，接口有什么用"></a>一、接口，什么是接口，为什么有接口，接口有什么用</h1><p>什么是接口：接口不是类，接口是对类一组需求的描述，这些类要遵从接口统一格式进行定义。因此接口不提供方法的实现，但提供方法的形式。因此接口和类很像，特别是和含有抽象方法的父类。接口里面不定义方法的实现和实例域，这些都是实现类干的事情，所以接口就像插排接口一样。</p>
+<p>为什么有接口：因为超类和子类的关系在java设计中是单一继承的，java设计思想是简单化，分开设计，因此多个子类继承一个超类，反过来就会有一个子类实现多个接口的思想出现。而接口的用处也就在这里。</p>
+<p>接口有什么用：主要用来描述类具有什么功能。</p>
+<h1 id="二、内部类"><a href="#二、内部类" class="headerlink" title="二、内部类"></a>二、内部类</h1><p>什么是内部类：在公有类的内部又产生一个类叫做内部类。内部类有“直接独立的内部类”、局部内部类（在方法内部定义的内部类）、匿名内部类（这个非常重要）、静态内部类。<strong>但是内部类比较复杂，需要重复总结。</strong></p>
+<p>为什么有内部类：使用匿名内部类作为回调函数比较便捷，内部类可以对同一个包内的其他类隐藏。</p>
+<p>内部类有啥用：思路不清晰，以后总结。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
 </body>
 
 
